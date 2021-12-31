@@ -367,7 +367,7 @@ export default defineComponent({
   },
   setup () {
     const home = ref({})
-    fetch('http://localhost:33806/home')
+    fetch('https://thawing-stream-56053.herokuapp.com/home')
       .then(res => res.json())
       .then((data) => {
         home.value = data.home
