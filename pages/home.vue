@@ -368,7 +368,7 @@ export default defineComponent({
   },
   setup () {
     const home = ref({})
-    fetch('/home')
+    fetch('http://localhost:33806'+ '/home')
       .then(res => res.json())
       .then((data) => {
         axios.get('/home')
