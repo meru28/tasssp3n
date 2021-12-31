@@ -368,7 +368,7 @@ export default defineComponent({
   },
   setup () {
     const home = ref({})
-    fetch('https://thawing-stream-56053.herokuapp.com/home')
+    fetch(process.env.BASE_URL + '/home')
       .then(res => res.json())
       .then((data) => {
         axios.get('/home')
