@@ -343,6 +343,7 @@
 </template>
 <script>
 import { defineComponent, reactive, ref, useMeta } from '@nuxtjs/composition-api'
+import axios from 'axios'
 // import Loading from 'vue-loading-overlay'
 // import 'vue-loading-overlay/dist/vue-loading.css'
 import 'slick-carousel/slick/slick.css'
@@ -370,6 +371,7 @@ export default defineComponent({
     fetch('https://thawing-stream-56053.herokuapp.com/home')
       .then(res => res.json())
       .then((data) => {
+        axios.get('/home')
         home.value = data.home
       })
 
