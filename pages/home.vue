@@ -368,7 +368,7 @@ export default defineComponent({
   },
   setup () {
     const home = ref({})
-    fetch(process.env.BASE_URL + '/home')
+    fetch('/home')
       .then(res => res.json())
       .then((data) => {
         axios.get('/home')
